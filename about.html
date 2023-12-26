@@ -6,6 +6,14 @@
     <link href='https://fonts.googleapis.com/css?family=Gugi' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet'>
     <style>
+      html, body {
+        margin:0px;
+        padding:0px;
+        min-height:100vh;
+        display:flex;
+        flex-direction:column;
+        font-family:Orbitron;
+      }
       nav {
         background-color:white;
         padding:3px 0px;
@@ -18,6 +26,10 @@
         padding:10px;
         margin-left:3px;
       }
+      main {
+        margin: 20px;
+        flex: 1 0 auto;
+      }
       .clearfix::after {
         content: "";
         clear: both;
@@ -25,12 +37,12 @@
       }
     </style>
   </head>
-  <body style="min-height:100%;margin:0px;padding:0px;display:flex;flex-direction:column;font-family:Orbitron;">
+  <body>
     {% include header.html %}
     {{content}}
-    <div class="clearfix" style="margin:20px">
+    <main class="clearfix">
     <h2>The Host</h2>
-    <img src="images/gustaf.jpg" alt="Gustaf" style="width:300px;height:400px;float:right;margin:30px">
+    <img src="images/gustaf.jpg" alt="Gustaf" style="width:300px;height:400px;float:right;margin:0px 30px 20px">
     <p>To assist you in your adventures, we have appointed our trusted long-time employee, Gustaf, to oversee the arcade. Gustaf is in charge of anything going on inside the arcade hall. He may be summoned by simply saying "Help, please!" out loud and he will try to be of assistance in any way he can. Any questions or issues can be voiced to him this way, or can be taken at the reception desk.</p>
     <h2>The Axiom Arcade</h2>
     <p>The Axiom Arcade is a joint venture started by Hollow Games and Gregarious Simulation Systems. The Axiom Arcade allows users to do, see, feel and experience anything they could ever imagine. 
@@ -40,7 +52,7 @@
       It is a place to meet up with old friends or to meet new ones, a place for relaxing or for thrills, a place to forget about life for a while and be fully immersed in whatever adventure you want to go on next.</p>
     <h2>Contact</h2>
     <p>The easiest and quickest way for us to assist you is for you to stop by the reception desk at the arcade. We are open 24 hours a day, 7 days a week, all year round! Alternatively, you can reach us at <a href="mailto:info@axiomarcade.sbs">info@axiomarcade.sbs</a>.
-    </div>
+    </main>
     {% include footer.html %}
     {{content}}
   </body>
